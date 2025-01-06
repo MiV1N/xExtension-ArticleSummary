@@ -147,7 +147,8 @@ async function sendOllamaRequest(container, oaiParams){
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${oaiParams.oai_key}`
       },
-      body: JSON.stringify(oaiParams)
+      body: JSON.stringify(oaiParams),
+      mode: 'cors'  // 显式设置 CORS 模式
     });
 
     if (!response.ok) {
