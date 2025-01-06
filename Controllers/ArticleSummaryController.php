@@ -8,6 +8,8 @@ class FreshExtension_ArticleSummary_Controller extends Minz_ActionController
     // 设置响应头为 JSON
     header('Content-Type: application/json');
 
+    header('Access-Control-Allow-Origin: *'); // 允许所有源，或指定特定源，例如 header('Access-Control-Allow-Origin: https://example.com');
+
     $oai_url = FreshRSS_Context::$user_conf->oai_url;
     $oai_key = FreshRSS_Context::$user_conf->oai_key;
     $oai_model = FreshRSS_Context::$user_conf->oai_model;
